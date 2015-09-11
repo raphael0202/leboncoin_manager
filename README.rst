@@ -18,29 +18,15 @@ Usage
 
 .. code:: python
 
-    import leboncoinManager
+    from leboncoinManager import leboncoinManager
 
-    #Read a gro file
-    title, atoms, box = groio.parse_file("filin.gro")
+    #Connect to your account
+    manager = leboncoinManager("username", "password")
 
-    #Write a gro file
-    with open("filout.gro", "w") as f:
-        for line in groio.write_gro(title, output_atoms, box):
-            print(line, end='', file=f)
+    #push an existing ad on the top of the list
+    manager.update("ad title") # "ad title" is the title visible on leboncoin.fr
 
-    #Renumber the atoms to avoid number above 100 000
-    atoms = groio.renumber(atoms)
+You can use the provided CLI ``leboncoin_manager`` to manage your ads:
+    leboncoin_manager -c ads.conf
 
-
-The function ``parse_file`` returns :
-
-- ``title``: the title of the system as written on line 1 of the file  as a string
-- ``atoms``: a list of atom, each atom is stored as a dictionary
-- ``box``: the box description as written on the last line as a string
-
-
-Run tests
----------
-
-Unit tests are available through `nosetests python module <https://nose.readthedocs.org>`_.
-    nosetests tests/test_groio.py
+A configuration file example is provided ('update.conf').
