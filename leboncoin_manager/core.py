@@ -209,3 +209,6 @@ class LeboncoinManager:
         """
         ad_parameters = self.delete(ad_title, recover_images=recover_images, recover_ad=True)
         self.publish(**ad_parameters)
+
+    def quit(self):
+        self.driver.quit()

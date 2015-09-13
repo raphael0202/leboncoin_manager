@@ -43,3 +43,5 @@ for section in config.sections():
 
     if action == "publish":
         manager.publish(**parameters)
+
+    manager.quit()
