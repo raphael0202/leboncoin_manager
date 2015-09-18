@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# coding: utf-8
 
 import argparse
 import configparser
@@ -15,6 +16,9 @@ parser.add_argument("-c", "--config-file", help="path of the configuration file"
 args = parser.parse_args()
 
 config_file_path = args.config_file
+
+if config_file_path is None:
+    sys.exit("A configuration file is needed.")
 
 if not os.path.isfile(config_file_path):
     sys.exit("The configuration path file is incorrect")
