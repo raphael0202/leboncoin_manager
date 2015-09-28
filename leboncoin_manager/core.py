@@ -22,17 +22,12 @@ from logging.handlers import RotatingFileHandler
 from urllib.parse import urlparse
 from urllib.error import HTTPError, URLError
 
-try:
-    import selenium
-    from selenium import webdriver
-    from selenium.webdriver.support.ui import Select, WebDriverWait
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.common.keys import Keys
-except ImportError as e:
-    sys.exit(
-        "Error during selenium import, please make sure that selenium is correctly installed: `pip install selenium`")
-
+import selenium
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select, WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

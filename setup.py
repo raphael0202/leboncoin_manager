@@ -3,11 +3,9 @@
  
 from setuptools import setup, find_packages
  
-import leboncoin_manager
- 
 setup(
     name='leboncoin_manager',
-    version="1.0.1",
+    version="1.0.2",
     packages=find_packages(),
     author="Raphaël B.",
     author_email="raphael0202@yahoo.fr",
