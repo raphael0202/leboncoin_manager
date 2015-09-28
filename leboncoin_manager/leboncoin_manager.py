@@ -7,7 +7,7 @@ import os
 import sys
 import ast
 
-from core import LeboncoinManager
+from leboncoin_manager.core import LeboncoinManager
 
 launch_directory = os.environ["PWD"]
 
