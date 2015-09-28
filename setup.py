@@ -7,7 +7,7 @@ import leboncoin_manager
  
 setup(
     name='leboncoin_manager',
-    version=leboncoin_manager.__version__,
+    version="1.0.1",
     packages=find_packages(),
     author="Raphaël B.",
     author_email="raphael0202@yahoo.fr",
